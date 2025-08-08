@@ -1,0 +1,6 @@
+node_modules
+npm-debug.log
+.env
+.DS_Store
+VideoDatasetTool Setup 1.0.0.exe
+VideoDatasetTool.exe

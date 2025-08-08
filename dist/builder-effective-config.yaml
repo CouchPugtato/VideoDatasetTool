@@ -1,0 +1,30 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.videodatasettool.app
+productName: VideoDatasetTool
+files:
+  - filter:
+      - '**/*'
+      - '!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}'
+      - '!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}'
+      - '!**/node_modules/*.d.ts'
+      - '!**/node_modules/.bin'
+      - '!**/.{idea,git,cache,github,vscode}'
+      - '!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitignore,.gitattributes}'
+      - '!**/{tsconfig.json,electron-builder.yml,jest.config.js}'
+      - '!{.eslintignore,.eslintrc.json,.prettierignore,.prettierrc.json}'
+win:
+  target:
+    - nsis
+  icon: build/icon.ico
+  signAndEditExecutable: false
+mac:
+  target:
+    - dmg
+  icon: build/icon.icns
+linux:
+  target:
+    - AppImage
+  icon: build/icon.png
+electronVersion: 37.2.6

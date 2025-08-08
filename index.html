@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Video Dataset Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="videoContainer" class="hidden">
+      <video id="videoPlayer" controls></video>
+      
+      <div class="video-controls">
+        <div class="navigation-controls">
+          <button id="backOneSecond" class="btn nav-btn">◀ 1s</button>
+          <button id="backHalfSecond" class="btn nav-btn">◀ 0.1s</button>
+          <button id="captureFrame" class="btn primary">Capture Current Frame</button>
+          <button id="forwardHalfSecond" class="btn nav-btn">0.1s ▶</button>
+          <button id="forwardOneSecond" class="btn nav-btn">1s ▶</button>
+        </div>
+        <div class="time-display">
+          <span>Current Time: </span>
+          <span id="currentTime">0:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="selectVideo" class="btn">Select Video</button>
+      <button id="selectDirectory" class="btn">Select Save Directory</button>
+    </div>
+    <div id="infoDisplay" class="info-display hidden">
+      <div class="info-item">
+        <span class="info-label">Video:</span>
+        <span id="videoPathDisplay" class="info-value">Not selected</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Save Directory:</span>
+        <span id="directoryPathDisplay" class="info-value">Not selected</span>
+      </div>
+    </div>
+    
+    <div id="statusMessage" class="status"></div>
+
+    <div id="capturedFrames" class="hidden">
+      <h2>Captured Frames</h2>
+      <div id="framesList"></div>
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>
