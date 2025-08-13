@@ -27,4 +27,6 @@ linux:
   target:
     - AppImage
   icon: build/icon.png
+asarUnpack:
+  - node_modules/ffmpeg-static/**/*
 electronVersion: 37.2.6

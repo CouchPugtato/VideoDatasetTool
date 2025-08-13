@@ -6,14 +6,13 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #1a1a1a; /* Dark background */
-  color: #e0e0e0; /* Light text for contrast */
+  background-color: #1a1a1a;
+  color: #e0e0e0;
   line-height: 1.6;
 }
 
-/* Update the container to be more responsive */
 .container {
-  max-width: 95%; /* Changed from fixed 900px to percentage-based */
+  max-width: 95%;
   width: 95%;
   margin: 0 auto;
   padding: 20px;
@@ -22,11 +21,10 @@ body {
   flex-direction: column;
 }
 
-/* Update the video container */
 #videoContainer {
-  margin: 20px 0;
-  width: 100%;
-  flex: 1; /* Allow it to grow */
+  margin: 20px auto;
+  width: 90%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   background-color: #212121;
@@ -35,24 +33,17 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Update the video player */
 #videoPlayer {
   width: 100%;
   height: auto;
-  min-height: 300px; /* Set a minimum height */
-  max-height: calc(100vh - 250px); /* Dynamic maximum height based on viewport */
+  min-height: 280px; 
+  max-height: calc(100vh - 280px); 
   background-color: #000;
   border-radius: 4px;
-  object-fit: contain; /* Maintains aspect ratio */
-  flex: 1; /* Allow it to grow within the container */
+  object-fit: contain; 
+  flex: 1;
 }
 
-/* Make sure the captured frames section is responsive too */
-#capturedFrames {
-  width: 100%;
-}
-
-/* Add media queries for better responsiveness */
 @media (max-width: 768px) {
   .container {
     width: 100%;
@@ -60,8 +51,12 @@ body {
     padding: 10px;
   }
   
+  #videoContainer {
+    width: 95%;
+  }
+  
   #videoPlayer {
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 220px);
   }
   
   .navigation-controls {
@@ -74,21 +69,23 @@ body {
   }
 }
 
-/* For larger screens, allow the video to be even bigger */
 @media (min-width: 1200px) {
   .container {
     max-width: 90%;
   }
   
+  #videoContainer {
+    width: 85%;
+  }
+  
   #videoPlayer {
-    max-height: calc(100vh - 300px);
+    max-height: calc(100vh - 320px);
   }
 }
 
 h2 {
   margin: 20px 0;
-  color: #b3b3b3; /* Muted light color for headings */
-  border-bottom: 1px solid #333;
+  color: #b3b3b3;
   padding-bottom: 8px;
 }
 
@@ -96,15 +93,13 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0; /* Adjusted margin */
+  margin: 20px 0;
   padding: 15px 0;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
 }
 
 .btn {
   padding: 10px 15px;
-  background-color: #455a64; /* Muted blue-gray */
+  background-color: #455a64;
   color: #e0e0e0;
   border: none;
   border-radius: 4px;
@@ -114,7 +109,7 @@ h2 {
 }
 
 .btn:hover {
-  background-color: #546e7a; /* Slightly lighter on hover */
+  background-color: #546e7a;
   transform: translateY(-1px);
 }
 
@@ -123,11 +118,11 @@ h2 {
 }
 
 .btn.primary {
-  background-color: #388e3c; /* Muted green */
+  background-color: #388e3c;
 }
 
 .btn.primary:hover {
-  background-color: #43a047; /* Slightly lighter green on hover */
+  background-color: #43a047;
 }
 
 .video-controls {
@@ -140,7 +135,7 @@ h2 {
 
 .time-display {
   font-size: 14px;
-  color: #9e9e9e; /* Muted gray */
+  color: #9e9e9e;
   margin-top: 10px;
 }
 
@@ -150,18 +145,18 @@ h2 {
   border-radius: 4px;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
-  background-color: #212121; /* Dark background */
+  background-color: #1a1a1a;
 }
 
 .status.success {
-  background-color: rgba(56, 142, 60, 0.2); /* Transparent green */
-  color: #81c784; /* Light green */
+  background-color: rgba(56, 142, 60, 0.2);
+  color: #81c784;
   border-left: 4px solid #388e3c;
 }
 
 .status.error {
-  background-color: rgba(198, 40, 40, 0.2); /* Transparent red */
-  color: #e57373; /* Light red */
+  background-color: rgba(198, 40, 40, 0.2);
+  color: #e57373;
   border-left: 4px solid #c62828;
 }
 
@@ -181,7 +176,7 @@ h2 {
 }
 
 .frame-item {
-  background-color: #212121; /* Dark card background */
+  background-color: #212121;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -205,7 +200,7 @@ h2 {
 
 .frame-info p {
   font-size: 12px;
-  color: #9e9e9e; /* Muted gray */
+  color: #9e9e9e;
   margin-bottom: 5px;
 }
 
@@ -222,19 +217,19 @@ h2 {
 }
 
 .delete-btn {
-  background-color: #c62828; /* Muted red */
+  background-color: #c62828;
 }
 
 .delete-btn:hover {
-  background-color: #d32f2f; /* Slightly lighter red on hover */
+  background-color: #d32f2f;
 }
 
 .view-btn {
-  background-color: #455a64; /* Muted blue-gray */
+  background-color: #455a64;
 }
 
 .view-btn:hover {
-  background-color: #546e7a; /* Slightly lighter on hover */
+  background-color: #546e7a;
 }
 
 .navigation-controls {
@@ -246,22 +241,22 @@ h2 {
 }
 
 .nav-btn {
-  background-color: #37474f; /* Dark blue-gray */
+  background-color: #37474f;
   padding: 8px 10px;
   font-size: 0.9em;
 }
 
 .nav-btn:hover {
-  background-color: #455a64; /* Slightly lighter on hover */
+  background-color: #455a64;
 }
 
 .info-display {
-  background-color: #212121; /* Dark background */
+  background-color: #212121;
   border-radius: 4px;
   padding: 15px;
   margin-bottom: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #455a64; /* Muted blue-gray accent */
+  border-left: 4px solid #455a64;
 }
 
 .info-item {
@@ -276,10 +271,10 @@ h2 {
 .info-label {
   font-weight: bold;
   min-width: 120px;
-  color: #b3b3b3; /* Muted light color */
+  color: #b3b3b3;
 }
 
 .info-value {
   word-break: break-all;
-  color: #e0e0e0; /* Light text */
+  color: #e0e0e0;
 }

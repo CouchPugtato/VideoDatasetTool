@@ -7,6 +7,7 @@
 </head>
 <body>
   <div class="container">
+  
     <div id="videoContainer" class="hidden">
       <video id="videoPlayer" controls></video>
       
@@ -24,10 +25,14 @@
         </div>
       </div>
     </div>
+    
+    <div id="statusMessage" class="status"></div>
+    
     <div class="controls">
       <button id="selectVideo" class="btn">Select Video</button>
       <button id="selectDirectory" class="btn">Select Save Directory</button>
     </div>
+
     <div id="infoDisplay" class="info-display hidden">
       <div class="info-item">
         <span class="info-label">Video:</span>
@@ -38,8 +43,6 @@
         <span id="directoryPathDisplay" class="info-value">Not selected</span>
       </div>
     </div>
-    
-    <div id="statusMessage" class="status"></div>
 
     <div id="capturedFrames" class="hidden">
       <h2>Captured Frames</h2>

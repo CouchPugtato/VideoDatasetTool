@@ -52,6 +52,9 @@
     "linux": {
       "target": ["AppImage"],
       "icon": "build/icon.png"
-    }
+    },
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/**/*"
+    ]
   }
 }

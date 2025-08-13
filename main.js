@@ -4,7 +4,16 @@ const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 const ffmpegPath = require('ffmpeg-static');
 
-ffmpeg.setFfmpegPath(ffmpegPath);
+let ffmpegPathToUse = ffmpegPath;
+
+if (app.isPackaged) {
+  const appPath = app.getAppPath();
+  const isAsar = appPath.includes('app.asar');
+  
+  if (isAsar) ffmpegPathToUse = ffmpegPath.replace('app.asar', 'app.asar.unpacked');
+}
+
+ffmpeg.setFfmpegPath(ffmpegPathToUse);
 
 let mainWindow;
 
